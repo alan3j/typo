@@ -1,10 +1,22 @@
 This is CS169.2x Homework 1: Typo
 
+1. Install Typo locally
 Fork: https://github.com/saasbook/typo
 Clone: git@github.com:alan3j/typo.git
 Branch: git checkout -b dev1 --track
 sudo bundle install --without production
 bundle exec rake db:migrate
 bundle exec rake db:seed
+
+2. Get the Typo test suite and make sure all specs pass green. Pending specs are fine. 
+add .rspec file with --color -fd
+bundle exec rake spec
+  Finished in 1 minute 19.18 seconds
+  1228 examples, 0 failures, 9 pending
+  Coverage report generated for RSpec to /home/ubuntu/Documents/hw/hw1/coverage. 13415 / 15011 LOC (89.37%) covered.
+bundle exec rake cucumber
+  3 scenarios (3 passed)
+  18 steps (18 passed)
+  0m4.206
 
 

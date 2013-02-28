@@ -24,3 +24,4 @@ public/cache/*
 bin/
 .bundle/
 db/db_development
+db/db_test
