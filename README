@@ -1,0 +1,10 @@
+This is CS169.2x Homework 1: Typo
+
+Fork: https://github.com/saasbook/typo
+Clone: git@github.com:alan3j/typo.git
+Branch: git checkout -b dev1 --track
+sudo bundle install --without production
+bundle exec rake db:migrate
+bundle exec rake db:seed
+
+
