@@ -19,4 +19,6 @@ bundle exec rake cucumber
   18 steps (18 passed)
   0m4.206
 
+Merging dev1 to master
+
 
