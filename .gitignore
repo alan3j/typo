@@ -25,3 +25,4 @@ bin/
 .bundle/
 db/db_development
 db/db_test
+doc/*.svg

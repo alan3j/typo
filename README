@@ -82,4 +82,74 @@ Playing with Dev Typo
   Signed up with blog name: jtz, email: alan.jjj@gmail.com
   Login: admin 
   Password: SzmmmgL
-  
+
+Wanting graphviz to install
+  Snapshot vm
+  Ran Ubuntu updates; 165 updates applied (probably not necessary)
+  Download libgraphviz4_2.30.1-1~precise_i386.deb and graphviz_2.30.1-1~precise_i386.deb from http://www.graphviz.org
+  Resolve conflicts
+    saasbook@saasbook:~$ dpkg-query -s libcdt4
+    Package: libcdt4
+    Status: install ok installed
+    Priority: optional
+    Section: libs
+    Installed-Size: 115
+    Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+    Architecture: i386
+    Source: graphviz
+    Version: 2.26.3-10ubuntu1
+    Depends: libc6 (>= 2.1.3)
+    Conflicts: libgraphviz4
+    Description: rich set of graph drawing tools - cdt library
+     Graphviz is a set of graph drawing tools. See the description of the graphviz
+     package for a full description.
+     .
+     This package contains the cdt library.
+    Homepage: http://www.graphviz.org/
+    Original-Maintainer: David Claughton <dave@eclecticdave.com>
+
+    saasbook@saasbook:~$ sudo apt-get remove libcdt4
+
+    saasbook@saasbook:~$ dpkg -s libpathplan4
+    Package: libpathplan4
+    Status: install ok installed
+    Priority: optional
+    Section: libs
+    Installed-Size: 123
+    Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+    Architecture: i386
+    Source: graphviz
+    Version: 2.26.3-10ubuntu1
+    Depends: libc6 (>= 2.3.4)
+    Conflicts: libgraphviz4
+    Description: rich set of graph drawing tools - pathplan library
+     Graphviz is a set of graph drawing tools. See the description of the graphviz
+     package for a full description.
+     .
+     This package contains the pathplan library.
+    Homepage: http://www.graphviz.org/
+    Original-Maintainer: David Claughton <dave@eclecticdave.com>
+
+    saasbook@saasbook:~$ sudo apt-get remove libpathplan4
+
+    saasbook@saasbook:~$ dpkg -s libxdot4
+    Package: libxdot4
+    Status: install ok installed
+    Priority: optional
+    Section: libs
+    Installed-Size: 107
+    Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+    Architecture: i386
+    Source: graphviz
+    Version: 2.26.3-10ubuntu1
+    Depends: libc6 (>= 2.7)
+    Conflicts: libgraphviz4
+    Description: rich set of graph drawing tools - xdot library
+     Graphviz is a set of graph drawing tools. See the description of the graphviz
+     package for a full description.
+     .
+     This package contains the xdot library.
+    Homepage: http://www.graphviz.org/
+    Original-Maintainer: David Claughton <dave@eclecticdave.com>
+
+
