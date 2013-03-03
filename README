@@ -152,4 +152,26 @@ Wanting graphviz to install
     Homepage: http://www.graphviz.org/
     Original-Maintainer: David Claughton <dave@eclecticdave.com>
 
+Finding the admin
+  With debugger set on AccountsController#login, line 1
+    /home/ubuntu/Documents/hw/hw1/app/controllers/accounts_controller.rb:16
+    if session[:user_id] && session[:user_id] == self.current_user.id
+    (rdb:7) cookies
+      {"_typo_blog_session"=>"BAh7CEkiD3Nlc3Npb25faWQGOgZFRiIlNmI5MWRlMDYzYWQ1ZDlmYTA2ZjBhNTc5M2JlNWI5N2NJIhBfY3NyZl90b2tlbgY7AEZJIjEvZVBFQnlBNEtnbWJoR3gyZENJUGRYWDFueXVlNUlkdFlwQ05Sb29uWlQwPQY7AEZJIgx0bXBwYXNzBjsARkkiDFN6bW1tZ0wGOwBG--f676ad547f59d082675705a6d761e7759dfb489e"}
+    (rdb:7) n
+    n.n.n.....
+    (rdb:7) 
+    /home/ubuntu/Documents/hw/hw1/app/controllers/accounts_controller.rb:37
+    add_to_cookies(:typo_user_profile, self.current_user.profile_label, '/')
+    (rdb:7) n
+    /home/ubuntu/Documents/hw/hw1/app/controllers/accounts_controller.rb:39
+    self.current_user.update_connection_time
+    (rdb:7) cookies
+    {"_typo_blog_session"=>"BAh7CEkiD3Nlc3Npb25faWQGOgZFRiIlNmI5MWRlMDYzYWQ1ZDlmYTA2ZjBhNTc5M2JlNWI5N2NJIhBfY3NyZl90b2tlbgY7AEZJIjEvZVBFQnlBNEtnbWJoR3gyZENJUGRYWDFueXVlNUlkdFlwQ05Sb29uWlQwPQY7AEZJIgx0bXBwYXNzBjsARkkiDFN6bW1tZ0wGOwBG--f676ad547f59d082675705a6d761e7759dfb489e", "typo_user_profile"=>"admin"}
+    (rdb:7) cookies['typo_user_profile']
+    "admin"
+    (rdb:7) 
+
+Merge form added with token controller action
+
 

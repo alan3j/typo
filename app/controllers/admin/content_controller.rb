@@ -28,6 +28,9 @@ class Admin::ContentController < Admin::BaseController
   end
 
   def edit
+
+    @admin_edit_form_action = 'edit'
+
     @article = Article.find(params[:id])
     unless @article.access_by? current_user
       redirect_to :action => 'index'
@@ -35,6 +38,11 @@ class Admin::ContentController < Admin::BaseController
       return
     end
     new_or_edit
+  end
+
+  def merge
+    flash[:error] = "Merge pressed..."
+    redirect_to :action => 'index'
   end
 
   def destroy

@@ -12,6 +12,7 @@ class AccountsController < ApplicationController
   end
 
   def login
+#--Finding the admin-- debugger
     if session[:user_id] && session[:user_id] == self.current_user.id
       redirect_back_or_default :controller => "admin/dashboard", :action => "index"
       return

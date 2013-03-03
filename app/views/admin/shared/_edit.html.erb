@@ -4,3 +4,14 @@
   <%= render :partial => "form" %>
 
 <% end %>
+
+<% #-- /admin/content(/:action(/:id)) %>
+ 
+<% if @admin_edit_form_action == 'edit' and cookies[:typo_user_profile] == 'admin' %>
+  <h4><%= _("Merge Articles") %></h4>
+  <%= form_tag("/admin/content/merge/#{@article.id}") do %>
+    Article ID: <%= text_field_tag 'merge_with' %>
+    <%= submit_tag 'Merge' %>
+  <% end %>
+<% end %>
+
