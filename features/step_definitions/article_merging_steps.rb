@@ -16,29 +16,16 @@ Given /^I am logged in with (a|an) '(.*)' account$/ do |boo, admin_type|
 end
 
 def login(user)
+#-- debugger
+  u = FactoryGirl.create(:user)
+  puts u
   visit '/accounts/login'
 #-- debugger
-#--  puts page.html
-    if page.current_path == '/setup'
-      initialize_blog
-    else
-      fill_in "user_login", :with => user[:username]
-      fill_in "input[user_password]", :with => user[:password]
-      click_button "login"
-    end
+  puts page.html
   puts user[:username]
   puts user[:password]
   puts cookies
 end
-
-def initialize_blog
-  fill_in "setting_blog_name", :with => "admin"
-  fill_in "setting_email", :with => "admin@local.loc"
-  click_button "submit"
-#-- debugger
-  puts page.html
-end
-
 
 Given /^I edit article '(\d+)'$/ do |arg1|
   pending # express the regexp above with the code you wish you had
