@@ -57,4 +57,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'railroady'
+  #--doesn't work: gem 'yaml_db'
 end

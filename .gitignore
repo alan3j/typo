@@ -23,6 +23,6 @@ public/cache/*
 .rbenv-version
 bin/
 .bundle/
-db/db_development
+db/db_development*
 db/db_test
 doc/*.svg

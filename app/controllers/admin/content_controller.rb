@@ -41,8 +41,9 @@ class Admin::ContentController < Admin::BaseController
   end
 
   def merge
-    flash[:error] = "Merge pressed..."
-    redirect_to :action => 'index'
+    flash[:error] = "Merge pressed. :id #{params[:id]}, :merge_with #{params[:merge_with]}"
+    #-- redirect_to :action => 'index'
+    redirect_to :action => 'edit', :id => params[:id], :merge_with => params[:merge_with]
   end
 
   def destroy

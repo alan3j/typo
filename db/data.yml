@@ -1,0 +1,12 @@
+
+--- 
+categories: 
+  columns: 
+  - id
+  - name
+  - position
+  - permalink
+  - keywords
+  - description
+  - parent_id
+  records: 

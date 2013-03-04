@@ -174,4 +174,18 @@ Finding the admin
 
 Merge form added with token controller action
 
+** Controller action rewrite
+** Cucumber scenario rewrite
+Modified seed.rb
+Trying
+  bundle exec rake db:seed RAILS_ENV=test --trace
+  to populate db_test
+
+Add require 'ruby-debug'
+to features/support/env.rb to debug cucumber
+
+Working on article_merging_steps.rb. Test initialization is difficult.
+
+
+
 
