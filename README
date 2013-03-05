@@ -187,6 +187,13 @@ to features/support/env.rb to debug cucumber
 Working on article_merging_steps.rb. Test initialization is difficult.
 
 Might be starting over...
+... nope :)
+
+
+Little trashy but all cucumber tests are green right now
+  left trial code in article_merging_steps.rb for now
+  seeds and FactoryGirl be damned!!!!
+    ended up copying db_development to db_test
 
 
 

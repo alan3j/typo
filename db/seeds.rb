@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
-Blog.create(:id => 1, :settings => {"canonical_server_url"=>""}, :base_url => "http://example.com/")
+Blog.create(:id => 1, :settings => {"canonical_server_url"=>"", :blog_name => 'jtz TEST'}, :base_url => "http://example.com/")
 Category.create(:id => 1, :name => "General", :permalink => "general", :position => 1)
 Profile.create(:id => 1, :label => "admin", :modules => [:dashboard, :articles, :pages, :media, :feedback, :themes, :sidebar, :users, :settings, :profile, :seo], :nicename => "Typo administrator")
 Profile.create(:id => 2, :label => "publisher", :modules => [:dashboard, :articles, :media, :pages, :feedback, :profile], :nicename => "Blog publisher")
@@ -43,4 +43,4 @@ TextFilter.create(:description => "Textile", :filters => [], :id => 5, :markup =
 Article.create(:allow_comments => true, :allow_pings => true, :author => "Mr Typo", :body => "Welcome to Typo. This is your first article. Edit or delete it, then start blogging!", :guid => "1bf3e2ca-ed7b-4562-8a4a-8ce8438822c8", :id => 1, :permalink => "hello-world", :post_type => "read", :published => true, :published_at => "2012-06-09 21:51:55 UTC", :settings => {"password"=>nil}, :state => "published", :text_filter_id => 5, :title => "Hello World!", :type => "Article", :user_id => 1)
 Page.create(:body => "This is an example of a Typo page. You can edit this to write information about yourself or your site so readers know who you are. You can create as many pages as this one as you like and manage all of your content inside Typo.", :id => 2, :name => "about", :post_type => "read", :published => true, :published_at => "2012-06-09 21:51:55 UTC", :settings => {"password"=>nil}, :state => "published", :text_filter_id => 5, :title => "about", :type => "Page", :user_id => 1)
 
-User.create(:id => 1,:login => 'admin',:password => '260f5cc9a9838da0d93e885e6b68dc9ef6e2cbc4',:email => 'alan.jjj@gmail.com',:name => 'admin',:profile_id => 1)
+#-- User.create(:id => 1,:login => 'admin',:password => '260f5cc9a9838da0d93e885e6b68dc9ef6e2cbc4',:email => 'alan.jjj@gmail.com',:name => 'admin',:profile_id => 1)

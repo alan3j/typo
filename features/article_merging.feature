@@ -7,6 +7,7 @@ Feature: Article Merging
     Given I am logged in with a 'Non-admin' account
     And I edit article '7'
     Then I will 'not see' 'Merge Articles'
+    And I will log out
     Given I am logged in with an 'admin' account
     And I edit article '7'
     Then I will 'see' 'Merge Articles'
