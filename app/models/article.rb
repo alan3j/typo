@@ -61,6 +61,31 @@ class Article < Content
 
   setting :password,                   :string, ''
 
+
+#-- ===============================================i============
+  def merge_with(other_article_id)
+    incoming_article = Article.find(other_article_id)
+    take_comments_from incoming_article
+    merge_body_from incoming_article
+    return self
+  end
+
+  def take_comments_from incoming_article
+    unless incoming_article.comments.blank?
+      incoming_article.comments.each do |comment|
+        self.comments << comment
+      end
+    end
+  end
+
+  def merge_body_from incoming_article
+    self.body += "<br>" + incoming_article.body
+    self.save!
+  end
+
+#-- ===========================================================
+
+
   def initialize(*args)
     super
     # Yes, this is weird - PDC

@@ -196,4 +196,10 @@ Little trashy but all cucumber tests are green right now
     ended up copying db_development to db_test
 
 
+Good but, still copying db_development to db_test
+  All my cucumber steps are green but original create_blog feature fails
+  I think I see what cost me so many staring in my face
+
+
+
 
