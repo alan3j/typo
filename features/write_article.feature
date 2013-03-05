@@ -1,3 +1,4 @@
+@writing
 Feature: Write Articles
   As a blog administrator
   In order to share my thoughts with the world
