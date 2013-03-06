@@ -42,8 +42,7 @@ class Admin::ContentController < Admin::BaseController
 
   def merge
     @merged_article = Article.find(params[:id]).merge_with(params[:merge_with])
-    flash[:error] = "Merge pressed. :id #{params[:id]}, :merge_with #{params[:merge_with]}"
-    #-- redirect_to :action => 'edit', :id => params[:id], :merge_with => params[:merge_with]
+    flash[:notice] = "Article id #{params[:merge_with]} is now merged into article id #{params[:id]}"
     redirect_to :action => 'edit', :id => @merged_article.id
   end
 

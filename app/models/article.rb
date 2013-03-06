@@ -67,6 +67,7 @@ class Article < Content
     incoming_article = Article.find(other_article_id)
     take_comments_from incoming_article
     merge_body_from incoming_article
+    destroy_incoming_article incoming_article
     return self
   end
 
@@ -81,6 +82,11 @@ class Article < Content
   def merge_body_from incoming_article
     self.body += "<br>" + incoming_article.body
     self.save!
+  end
+
+  def destroy_incoming_article incoming_article
+    fresh_copy = Article.find incoming_article.id
+    fresh_copy.destroy
   end
 
 #-- ===========================================================
