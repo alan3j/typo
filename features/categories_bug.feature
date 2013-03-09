@@ -11,3 +11,10 @@ Feature: Create and edit categories
   Scenario: When I visit admin/categories/new the app works
     Given I go to /admin/categories/new
     Then I will 'see' 'Categories'
+    Given I edit category '1'
+    Then I will 'see' 'Major'
+    And I will 'not see' 'General'
+    Given I add category 'Random'
+    Then I will 'see' 'Random'
+    And I will 'see' 'garbage'
+
